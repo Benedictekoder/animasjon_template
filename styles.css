@@ -12,7 +12,7 @@ body {
 }
 
 /* MAIN */
-main {
+.main {
   height: 100vh;
   gap: 50px;
   display: flex;
@@ -35,10 +35,32 @@ main {
 .slideInLeftCard {
   background-color: var(--cardFromLeft);
   color: whitesmoke;
+  animation-name: slideInLeft;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes slideInLeft{
+  from{
+    transform: translateX(-300vw);
+  }
+  to{
+    transform: translateX(0);
+  }
 }
 
 .slideInRightCard {
   background-color: var(--cardFromRight);
+  animation: slideInRight 3s ease-in;
+}
+
+@keyframes slideInRight{
+  from{
+     transform: translateX(300vw);
+  }
+  to{
+      transform: translateX(0);
+  }
 }
 
 .rotateCard {
@@ -46,6 +68,13 @@ main {
   width: 100px;
   height: 100px;
   background-color: var(--rotate);
+}
+
+.flexColCenter{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .buttonContainer {
