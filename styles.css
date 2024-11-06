@@ -68,6 +68,23 @@ body {
   width: 100px;
   height: 100px;
   background-color: var(--rotate);
+  animation-name: fullRotation;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes fullRotation{
+  0%{
+    transform: rotate(0);
+  }
+  50%{
+    transform: rotate(360deg);
+    scale: 1.5;
+  }
+  100%{
+    transform: rotate(-0);
+    scale: 1;
+  }
 }
 
 .flexColCenter{
@@ -90,4 +107,25 @@ body {
   border-color: lightgrey;
   border-style: solid;
   box-shadow: 2px 2px 5px lightgrey;
+}
+
+.buttonColor{
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
+}
+
+.buttonColor:hover{
+  background-color: aquamarine;
+}
+
+.buttonSize{
+  transition: 1s ease-in;
+}
+
+.buttonSize:hover{
+  scale: 1.3;
+}
+
+.buttonOpacity:hover{
+  opacity: 50%;
 }
